@@ -1,12 +1,3 @@
 # Created by .ignore support plugin (hsz.mobi)
-*/target
 *.iml
-/.idea
-*.class
-target/
-.project
-.settings/
-.classpath
-
-# Created by .ignore support plugin (hsz.mobi)
 /.idea/
