@@ -2,11 +2,15 @@ package chapter3;
 
 public class Q8 {
     private int len;
-    private Node head;
+    private Node head = new Node(null);
 
     public static class Node {
-        double element;
+        Double element;
         Node next;
+
+        public Node(Double element) {
+            this.element = element;
+        }
     }
 
     public void derivative() {
@@ -20,12 +24,22 @@ public class Q8 {
             return;
         }
 
-        while (temp.next.next != head) {
+        while (temp.next != head) {
             temp.element *= l;
             l--;
             temp = temp.next;
         }
         len--;
         temp.next = head;
+    }
+
+    public static void main(String[] args) {
+        Q8 q8 = new Q8();
+        q8.head.next = new Node(2.0);
+        q8.head.next.next = new Node(1.0);
+        q8.len = 2;
+        q8.head.next.next.next = q8.head;
+        q8.derivative();
+        System.out.println(q8.head.next.element + "      " + q8.len);
     }
 }

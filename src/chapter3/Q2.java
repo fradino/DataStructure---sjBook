@@ -116,7 +116,7 @@ public class Q2<T extends Comparable> {
     public static void main(String[] args) {
         Q2<Double> q2 = new Q2<>(new Double[]{8.0, 5.0, 2.0, 7.0, 4.0, 1.0});
         Q2<Double> q21 = new Q2<>(new Double[]{100.0, -80.0});
-        q2.deleteByRange(2.0, 7.0);
+        q2.deleteByRange(9.0, 7.0);
         System.out.println(q2);
     }
 }

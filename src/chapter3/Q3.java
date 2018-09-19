@@ -1,5 +1,6 @@
 package chapter3;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class Q3 {
@@ -27,12 +28,38 @@ public class Q3 {
                 t = t.next;
             }
         }
+        head.next = null;
         return p;
     }
+
+    public static void main(String[] args) {
+        Node<Integer> head = new Node<>(1);
+        head.next = new Node<>(2);
+        head.next.next = new Node<>(3);
+        System.out.println(head.element + "   " + head.next.element + "    " + head.next.next.element);
+//        for (Node n=head;n!=null;n=n.next){
+//            System.out.println(n.element);
+//        }
+        head = reverseList(head);
+//        for (Node n=head;n!=null;n=n.next){
+//            System.out.println(n.element);
+//        }
+        System.out.println(head.element + "   " + head.next.element + "    " + head.next.next.element);
+
+
+        Integer[] a = new Integer[]{1, 2, 3, 4, 5};
+        reverseArray(a);
+        System.out.println(Arrays.toString(a));
+    }
+
 
 }
 
 class Node<T extends Comparable<T>> {
     T element;
     Node next;
+
+    public Node(T element) {
+        this.element = element;
+    }
 }
