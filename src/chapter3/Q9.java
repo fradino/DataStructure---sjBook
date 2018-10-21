@@ -65,6 +65,8 @@ public class Q9<T> {
         System.out.println(q9.head.next.element + "   " + q9.head.next.next.element + "      " + q9.head.next.next.next.element);
         q9.locate(3);
         System.out.println(q9.head.next.element + "   " + q9.head.next.next.element + "      " + q9.head.next.next.next.element);
+        q9.locate(2);
+        System.out.println(q9.head.next.element + "   " + q9.head.next.next.element + "      " + q9.head.next.next.next.element);
     }
 
 }
